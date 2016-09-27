@@ -1,20 +1,19 @@
 <head>
   <title>Basics of CSS</title>
-</head>
-<body>
-  <div class="content">
-    <p>I am a paragraph under a div that has a class="content"</p>
-    <p>But for now how about...</p>
-    <div class="table-of-contents">
-      <h1>The Basics:</h1>
-      <ul>
-        <li>What's in a page?</li>
-        <li>Padding and Margin: I knew they were trouble when the popped in.</li>
-        <li>Display: Show me the money!</li>
-      </ul>
-    </div>
-    <h1>The CSS:</h1>
-    <textarea class="css-code">
+  <style>
+    head, style{
+      display:block;
+    }
+    style:first-of-type, header{
+      display:none; 
+    }
+    style:last-of-type{
+     white-space:pre;
+     border:1px solid black;
+    }
+  </style>
+  <h1>The CSS:</h1>
+  <style>
     .content{
     
     }
@@ -42,7 +41,24 @@
     .cancel{
 
     }
-    </textarea>
+    style{
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <p>I am a paragraph under a div that has a class="content"</p>
+    <p>But for now how about...</p>
+    <div class="table-of-contents">
+      <h1>The Basics:</h1>
+      <ul>
+        <li>What's in a page?</li>
+        <li>Padding and Margin: I knew they were trouble when the popped in.</li>
+        <li>Display: Show me the money!</li>
+      </ul>
+    </div>
+    <h1>The CSS:</h1>
     <button class="submit">Inject!</button>
     <button class="cancel">Remove</button>
   </div>
