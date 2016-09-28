@@ -1,0 +1,156 @@
+<html><head>
+  <title>Basics of CSS</title>
+  <script src="jquery.min.js"></script>
+</head>
+<body>
+  <div class="content">
+    <p>I am a paragraph under a div that has a class="content"</p>
+    <p>But for now how about...</p>
+    <div class="table-of-contents">
+  <div class="section">
+      <h1>The Basics:</h1>
+      <ul>
+        <li>What's in a page?</li>
+        <li>Padding and Margin: I knew they were trouble when the popped in.</li>
+        <li>Display: Show me the money!</li>
+      </ul>
+  </div>
+  <div class="section">
+  <h1>Moving on...</h1>
+  <ul>
+        <li style="
+    list-style-position: outside;
+">CSS Selectors: Can you make me unique?</li>
+        <li>What's your position?</li>
+        <li>CSS can be stylish: let's clean up!</li>
+      </ul>
+  </div>
+    <div class="section">
+  <h1>Advanced CSS</h1>
+  <ul>
+        <li style="
+    transform: scale;
+">Transforming CSS</li>
+        <li>Padding and Margin: I knew they were trouble when the popped in.</li>
+        <li>Display: Show me the money!</li>
+      </ul>
+  </div></div>
+    <div class="the-money" style="display:none">💰</div><h1>The CSS:</h1>
+  <style>
+    head, style{
+      display:block;
+    }
+    style:first-of-type, title, script{
+      display:none;
+    }
+    style:last-of-type{
+     white-space:pre;
+     border:1px solid black;
+    }
+    * {
+    transition: all 3s;
+    transition-delay: .4s;
+    }
+    .content{
+    width:100%;
+    margin: 0;
+    }
+  </style>
+  <style contenteditable="true">
+body{
+  background-color:darkgrey;
+  font-family: arial;
+  background-color: rgba(0,0,0,.85);
+}
+.content{
+  background-color:lightblue;
+  width:1200px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 3px 30px 10px 100px;
+  clockwise: yes;
+  border-radius: 5px;
+  border: 3px solid rgb(200,230,245);
+  box-shadow: 0 3px 30px rgba(0,0,0,.75);
+  background-color: rgb(140,180,195)
+}
+h1{
+  font-size:1.5em;
+}
+p{
+  display:none;
+}
+.the-money{
+  display: inline-block !important;
+  color:green;
+  font-size:3.2em;
+  vertical-align:top;
+  position:absolute;
+  position:fixed;
+  right:1em;
+  /*bottom:.5em;*/
+  color: rgb(140, 185, 140);
+  transform: rotate(90deg);
+  right: -2em;
+  top: 3em;
+}
+.the-money::after{
+  content: " cha-ching";
+}
+.section{
+  display:inline-block;
+}
+.table-of-contents{
+  background:white;
+  padding: 1em 2em;
+  display: inline-block;
+  border-radius: 16px;
+  box-shadow: inset 0 0 30px rgba(0,0,0,.4), inset 0 0 2px blue;
+  padding: 1.5em 2em 1em 2em;
+}
+.table-of-contents h1{
+  margin:0;
+}
+ul{
+  width: 360px;
+  margin-bottom: 1em;
+}
+li{
+  margin:.6em 0;
+  list-style-type:none;
+  margin:.5em 0;
+  /*font-style:italic;*/
+  transform: scale(.9,.9) skewX(172deg) translateX(-40px);
+}
+style{
+  background-color:light-grey;
+  background-color:rgb(40,30,40);
+  color:black;
+  color:rgb(180,235,180);
+  padding: 2px 1em;
+  height:650px;
+  height:450px;
+  overflow:auto;
+  font-family:courier;
+  font-weight:bold;
+}
+.section:not(:nth-child(3)){
+  display:none;
+}
+  </style>
+  </div>
+
+
+<script>
+    $('style[contenteditable=true]').keydown(function(e) {
+    // trap the return key being pressed
+    if (e.keyCode == 13) {
+      // insert 2 br tags (if only one br tag is inserted the cursor won't go to the second line)
+      document.execCommand('insertHTML', false, '\n');
+      // prevent the default behaviour of return key pressed
+      return false;
+    }
+  });
+  </script>
+</div></body></html>
