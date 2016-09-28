@@ -3,7 +3,14 @@
   <script src="jquery.min.js"></script>
 </head>
 <body>
-  <div class="content">
+  <div class="content"><div class="navigation">
+      <div class="nav-item">Home</div>
+      <div class="nav-item">Work</div>
+      <div class="nav-item">Vactation</div>
+      <div class="nav-item">When is vacation</div>
+      <div class="nav-item">About us</div>
+  </div>
+    
     <p>I am a paragraph under a div that has a class="content"</p>
     <p>But for now how about...</p>
     <div class="table-of-contents">
@@ -31,8 +38,8 @@
         <li style="
     transform: scale;
 ">Transforming CSS</li>
-        <li>Padding and Margin: I knew they were trouble when the popped in.</li>
-        <li>Display: Show me the money!</li>
+        <li>CSS Flex: flex those CSS muscles</li>
+        <li>Best Practices and Favorite <a href="http://www.css-tricks.com">Resource</a> </li>
       </ul>
   </div></div>
     <div class="the-money" style="display:none">💰</div><h1>The CSS:</h1>
@@ -73,7 +80,7 @@ body{
   border-radius: 5px;
   border: 3px solid rgb(200,230,245);
   box-shadow: 0 3px 30px rgba(0,0,0,.75);
-  background-color: rgb(140,180,195)
+  background-color: rgb(140,180,195);
 }
 h1{
   font-size:1.5em;
@@ -109,6 +116,10 @@ p{
   box-shadow: inset 0 0 30px rgba(0,0,0,.4), inset 0 0 2px blue;
   padding: 1.5em 2em 1em 2em;
 }
+.table-of-contents:hover{
+  background-color: whitesmoke;
+  transition: background-color .5s;
+}
 .table-of-contents h1{
   margin:0;
 }
@@ -135,8 +146,46 @@ style{
   font-family:courier;
   font-weight:bold;
 }
+*{
+  transition: all .5s;
+}
 .section:not(:nth-child(3)){
   display:none;
+}
+
+
+
+
+
+.navigation{
+  /*display:none;*/
+  margin-bottom:20px;
+  display:flex;
+  justify-content:flex-end;
+  justify-content:center;
+  width:850px;
+  margin: 0 auto 20px auto
+}
+.nav-item{
+  padding:10px 20px;
+  background:rgba(255,255,255,.2);
+  border-right: 2px solid rgba(255,255,255,.2);
+  flex-grow:1;
+}
+.nav-item:hover{
+  background:rgba(255,255,255,.5);
+  transition: all .5s;
+  cursor: pointer;
+}
+.nav-item:first-child{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  flex-grow:2;
+}
+.nav-item:last-child{
+  border-right: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
   </style>
   </div>
@@ -153,4 +202,4 @@ style{
     }
   });
   </script>
-</div></body></html>
+</body></html>
